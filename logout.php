@@ -5,5 +5,5 @@ unset($_SESSION['fac_access_token']);
 unset($_SESSION['email']);
 unset($_SESSION['picture']);
 
-header('location:http://localhost/social-login/');
+header('location:https://login-social-app.herokuapp.com/');
 exit;
