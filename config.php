@@ -7,7 +7,7 @@ require_once "vendor/autoload.php";
 // user class
 require_once "user.php";
 // database
-$user=new  User();
+// $user=new  User();
 
 // Google Client
 $google_client = new Google_Client();
@@ -38,7 +38,7 @@ if (isset($_GET['code'])) {
             $user_name = $_SESSION['email'];
             //save data to db
 
-            $user->replace($data['email'],date('d-m-y h:i:s'));
+//             $user->replace($data['email'],date('d-m-y h:i:s'));
         }
         if(!empty($data['picture'])){
             $_SESSION['picture']=$data['picture'];
@@ -63,7 +63,7 @@ if (isset($_GET['code'])) {
             $profile_pic='http://graph.facebook.com/'.$fid.'/picture?type=large';
             //save data to db
 
-            $user->replace($user_name,date('d-m-y h:i:s'));
+//             $user->replace($user_name,date('d-m-y h:i:s'));
         }
     }
 }
