@@ -13,7 +13,7 @@ $user=new  User();
 $google_client = new Google_Client();
 $google_client->setClientId('623252265251-e263j44ulpksp9elmi2scjffcoi2h7li.apps.googleusercontent.com');
 $google_client->setClientSecret('y5_mC5lq27s7k4jpRjMFGiXK');
-$google_client->setRedirectUri('http://localhost/social-login/');
+$google_client->setRedirectUri('https://login-social-app.herokuapp.com/');
 $google_client->addScope('email');
 $google_client->addScope('email');
 
@@ -24,7 +24,7 @@ $fb = new Facebook\Facebook([
     'default_graph_version'=>'v2.10'
 ]);
 $helper = $fb->getRedirectLoginHelper();
-$fb_login_url = $helper->getLoginUrl('http://localhost/social-login/');
+$fb_login_url = $helper->getLoginUrl('https://login-social-app.herokuapp.com/');
 if (isset($_GET['code'])) {
     $goToken=$google_client->fetchAccessTokenWithAuthCode($_GET['code']);
     if (!isset($goToken['error'])) {//access success
