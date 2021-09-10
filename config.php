@@ -7,7 +7,7 @@ require_once "vendor/autoload.php";
 // user class
 require_once "user.php";
 // database
-// $user=new  User();
+$user=new  User();
 
 // Google Client
 $google_client = new Google_Client();
